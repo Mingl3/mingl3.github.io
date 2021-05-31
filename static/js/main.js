@@ -4,8 +4,6 @@ $(document).ready(function () {
     scrollToBottom();
     faq();
 });
-
-
 // Navbar
 function hideMobile() {
     var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
@@ -15,12 +13,8 @@ function hideMobile() {
     }
     $("#mobile-nav").hide();
 }
-
 // Navbar End
-
-
 // Index
-
 function swapCols() {
     $("#col-1").removeClass("order-1").addClass("order-2");
     $("#col-2").removeClass("order-2").addClass("order-1");
@@ -31,15 +25,7 @@ function scrollToBottom(){
         $(document).scrollTop($(document).height());
     });
 }
-
 // Index End
-
-
-// Contact
-
-
-// Contact End
-
 // FAQ
 function faq() {
     var faqs = document.getElementsByClassName("faq");
@@ -56,11 +42,8 @@ function faq() {
         });
     }
 }
-
 // FAQ End
-
 // GA
-
 const ga = () =>{
     var imported = document.createElement('script');
     imported.src = 'https://www.googletagmanager.com/gtag/js?id=UA-198186321-1';
@@ -73,7 +56,6 @@ const ga = () =>{
 
     gtag('config', 'UA-198186321-1');
 };
-
 // GA End
 
 
