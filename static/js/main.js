@@ -1,11 +1,8 @@
 $(document).ready(function () {
+    ga();
     hideMobile();
+    scrollToBottom();
     faq();
-
-
-    $("button").click(function() {
-        $(document).scrollTop($(document).height());
-    });
 });
 
 
@@ -27,6 +24,12 @@ function hideMobile() {
 function swapCols() {
     $("#col-1").removeClass("order-1").addClass("order-2");
     $("#col-2").removeClass("order-2").addClass("order-1");
+}
+
+function scrollToBottom(){
+    $("button").click(function() {
+        $(document).scrollTop($(document).height());
+    });
 }
 
 // Index End
@@ -55,6 +58,23 @@ function faq() {
 }
 
 // FAQ End
+
+// GA
+
+const ga = () =>{
+    var imported = document.createElement('script');
+    imported.src = 'https://www.googletagmanager.com/gtag/js?id=UA-198186321-1';
+    document.head.appendChild(imported);
+
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-198186321-1');
+};
+
+// GA End
 
 
 
